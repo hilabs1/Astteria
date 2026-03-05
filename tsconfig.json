@@ -1,0 +1,6 @@
+{
+  "compilerOptions":  {
+    "moduleResolution": "node",
+  },
+  "extends": "@react-native/typescript-config/tsconfig.json"
+}

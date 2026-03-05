@@ -1,0 +1,33 @@
+
+export const white = '#FFF';
+export const black = '#000';
+export const searchHeaderColor = '#000';
+export const red = 'rgb(201, 38, 38)';
+export const lightGray = '#E2E4E6'; // 'rgb(220,220,220)'; changed @ 270918
+
+export const gray = 'rgb(200,200,200)';
+export const darkGray = 'rgb(150,150,150)';
+export const trans = 'rgba(0,0,0,0)';
+export const royalBlue = 'rgb(16,22,36)';
+export const green = 'green';
+export const salmon = 'rgb(227, 192, 182)';
+export const cert = 'rgb(240, 240, 240)';
+export const searchJewelryImage = '#0E1420';
+export const shadowBox = 'rgba(0,0,0,0.14)';
+export const rectangular = '#0E1420';
+export const cuLabel = '#526173';
+export const sendButton = '#C8B887';
+export const phoneBackground = '#F9F8F7';
+export const searchBarBorder = '#E3E3E3';
+export const searchFilterShadow = 'rgb(243,244,247)';
+export const blueButton = '#2F364C';
+export const filterButtonGray = '#F5F5F7';
+export const fancyColorSubGray = '#808080';
+export const searchFieldGray = '#4A4A4A';
+export const detailImageSliderBackground = '#DDDDDD';
+export const labelColor = '#848484';
+export const popUpButton = 'rgb(250, 250, 250)';
+export const whiteTrans = 'rgba(250,250,250,0.6)';
+export const whiteBoxShadow = 'rgb(225,229,233)';
+export const priceGray = 'rgb(230,230,230)';
+export const pdfLabelGray = '#838383';
