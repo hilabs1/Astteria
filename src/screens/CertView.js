@@ -24,7 +24,7 @@ export default class CertView extends Component {
 		// this.share = this.share.bind(this);
 		this.state = {
 			loading: false,
-			[strings.offlineMode]: this.props.navigation.getParam('offlineLink', strings.none)
+			[strings.offlineMode]: this.props.route?.params?.offlineLink || strings.none
 		};
 	}
 
@@ -76,9 +76,9 @@ setZoomRef = node => { // the ScrollView has a scrollResponder which allows us t
 getView () {
 	// certUrl that works: http://dtol-cert-images.s3-website-us-east-1.amazonaws.com/GIA_jpg/2175189103.jpg
 	// console.log('certView: TKT_3: getView ~~~~~~~~~~~~~~~~~~~~~~~');
-	var certURL = this.props.navigation.getParam('data', strings.unlisted); // 'https://mediaen.asteriadiamonds.com/certs/1179040659.pdf'; //this.props.navigation.getParam('data', strings.unlisted); //getting url from props
-	var alt = this.props.navigation.getParam('alt', strings.unlisted);
-	var lab = this.props.navigation.getParam('lab', strings.unlisted);
+	var certURL = this.props.route?.params?.data || strings.unlisted; // 'https://mediaen.asteriadiamonds.com/certs/1179040659.pdf'; //this.props.route?.params?.data || strings.unlisted; //getting url from props
+	var alt = this.props.route?.params?.alt || strings.unlisted;
+	var lab = this.props.route?.params?.lab || strings.unlisted;
 
 	var certDisplay = certURL;
 
