@@ -72,36 +72,13 @@ const height = isTablet ? (Platform.OS === 'android' ? 150 : 250) : 160;
 // (Platform.OS === 'ios' ? 250 : 160) : 160;
 
 export default class SearchLoose extends Component {
-  static navigationOptions({ navigation }) {
-    const { params = {} } = navigation.state;
-    return {
-      headerRight: (
-        <TouchableOpacity
-          onPress={() => {
-            if (params.action !== undefined) {
-              params.action();
-            }
-          }}>
-          <Image
-            style={{
-              resizeMode: 'contain',
-              alignSelf: 'center',
-              marginRight: getTextSize(15),
-              width: getIconHeight(),
-              height: getIconHeight(),
-            }}
-            source={require('./components/pics/searchTop.png')}
-          />
-        </TouchableOpacity>
-      ),
-    };
-  }
+  // navigationOptions is deprecated in React Navigation v6
+  // Header configuration is now handled in routes.js
 
   constructor(props) {
     super(props);
-    logger('this.props.navigation.state', this.props.navigation.state)
-    const { state } = this.props.navigation;
-    searchObj = state.params.searchEngine //props.route.params.searchEngine;
+    logger('this.props.route.params', this.props.route?.params)
+    searchObj = this.props.route?.params?.searchEngine;
     // this.stateHandler = this.stateHandler.bind(this);
     // this.handleBackButton = this.handleBackButton.bind(this);
     // this.fetchData = this.fetchData.bind(this);
@@ -247,9 +224,8 @@ export default class SearchLoose extends Component {
   };
 
   componentDidMount() {
-    this.props.navigation.setParams({
-      action: this.openSearchDropDown,
-    });
+    // setParams is deprecated in React Navigation v6
+    // Header configuration is now static in routes.js
     BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
   }
 
