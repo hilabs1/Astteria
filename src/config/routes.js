@@ -352,17 +352,13 @@ function InitialLoginStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        gestureEnabled: false,
+        headerShown: true,
       }}>
       <Stack.Screen
         name="initialLogin"
         component={GuestLogin}
         options={{
-          headerStyle: {
-            backgroundColor: colors.searchHeaderColor,
-          },
-          title: strings.AppName,
-          headerBackTitle: ' ',
+          title: 'ASTTERIA',
         }}
       />
       <Stack.Screen
