@@ -80,21 +80,9 @@ const HeaderTouchable = (action, source, navigation, sideMargin) => (
 );
 
 export default class WelcomeSearch extends Component {
-  static navigationOptions({ navigation }) {
-    const { params = {} } = navigation.state;
-    return {
-      headerLeft: HeaderTouchable(params.openDrawer, menuImage, navigation, 10),
-
-      headerRight: (
-        <View style={styles.headerStyle}>
-          {HeaderTouchable(params.refreshAction, refreshImage, navigation, 7)}
-
-          {HeaderTouchable(params.action, searchTopImage, navigation, 7)}
-        </View>
-      ),
-    };
-  }
-
+  // navigationOptions is deprecated in React Navigation v6
+  // Header configuration is now handled in routes.js
+  
   constructor(props) {
     super(props);
     this.openSearchDropDown = this.openSearchDropDown.bind(this);
@@ -105,8 +93,6 @@ export default class WelcomeSearch extends Component {
     this.openDrawer = this.openDrawer.bind(this);
 
     logger('constructor');
-
-    const { state } = this.props.navigation;
 
     this.state = {
       loading: true,
@@ -342,11 +328,8 @@ export default class WelcomeSearch extends Component {
         toast: false,
       });
     }
-    this.props.navigation.setParams({
-      action: this.openSearchDropDown,
-      refreshAction: this.refresh,
-      openDrawer: this.openDrawer,
-    });
+    // setParams is deprecated in React Navigation v6
+    // Header configuration is now static in routes.js
   }
 
   /**
