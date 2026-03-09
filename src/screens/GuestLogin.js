@@ -107,7 +107,7 @@ export default class GuestLogin extends Component {
         loading: false,
       },
       () => {
-        this.props.navigation.navigate('profile');
+        this.props.navigation.navigate('drawerStack', { screen: 'profileStack', params: { screen: 'profile' } });
       },
     );
   }
