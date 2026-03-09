@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, Image, Keyboard, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 
 import * as colors from '../screens/colors';
@@ -31,7 +31,7 @@ import {
   TEXT,
 } from '../Cortex';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 function press(navigation) {
