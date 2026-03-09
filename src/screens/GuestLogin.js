@@ -288,7 +288,7 @@ export default class GuestLogin extends Component {
           loading: false,
         },
         () => {
-          this.props.navigation.navigate('welcome');
+          this.props.navigation.navigate('drawerStack', { screen: 'appStack', params: { screen: 'welcome' } });
         },
       );
 
@@ -325,7 +325,7 @@ export default class GuestLogin extends Component {
             },
             () => {
               // logger('got here')
-              this.props.navigation.navigate('welcome');
+              this.props.navigation.navigate('drawerStack', { screen: 'appStack', params: { screen: 'welcome' } });
             },
           );
           return true;
@@ -372,7 +372,7 @@ export default class GuestLogin extends Component {
           loading: false,
         },
         () => {
-          this.props.navigation.navigate('welcome');
+          this.props.navigation.navigate('drawerStack', { screen: 'appStack', params: { screen: 'welcome' } });
         },
       );
     } else {
@@ -530,7 +530,7 @@ export default class GuestLogin extends Component {
           loading: false,
         },
         () => {
-          this.props.navigation.navigate('welcome');
+          this.props.navigation.navigate('drawerStack', { screen: 'appStack', params: { screen: 'welcome' } });
         },
       );
 
